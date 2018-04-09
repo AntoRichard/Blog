@@ -1,0 +1,37 @@
+<% include ./partials/header %>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+<style>
+        h1{
+            color: black;
+            font-style: oblique;
+            font-family: 'Times New Roman';
+        }
+        body{
+            background-color: white;
+        }
+        p{
+            color: black;
+            font-style: oblique;
+        }
+    </style>
+
+<h1>
+<center>EDIT PRODUCT DETAILS</center>
+</h1>
+<div class="container">
+<div class="container"> 
+    <form  action="/showmore/<%=data._id%>?_method=PUT" method="POST" >
+            <p><b>Edit Product name:</b></p><input class="form-control" type="text" accept="image/*" value="<%=data.name%>" name="data[name]" required>
+            <p><b>Edit Product Price:</b></p><input class="form-control" type="text" accept="image/*" value="<%=data.price%>" name="data[price]" required>
+            <p><b>Edit Product image:</b></p><input class="form-control" type="text" value="<%=data.image%>" name="data[image]" required>
+            <p><b>Edit Product description:</b></p><input class="form-control" type="text" value="<%=data.about%>" name="data[about]" required><br>
+            <button type="submit" class="btn btn-success">Submit</button>
+    </form> <br>
+</div>
+</div>
+<% include ./partials/footer %>

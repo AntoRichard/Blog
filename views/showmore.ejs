@@ -1,0 +1,32 @@
+<% include ./partials/header %>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+        .checked {
+            color: orange;
+        }
+        </style>
+<h2>
+   <center> <%= data.name %></center>
+</h2>
+<center><img src="<%= data.image %>" ></center>
+<h4>
+    RS:<%= data.price %>
+</h4>
+<p> <b>Description:</b> <%= data.about %></p>
+<a class="btn btn-primary" href="/showmore/<%=data._id%>/contact">Buy</a>
+<a class="btn btn-warning" href="<%= data._id %>/edit">edit</a><br><br>
+<form  action="/showmore/<%=data._id%>?_method=DELETE" method="POST">
+    <button type="submit" href="/index" class="btn btn-danger">Delete</button>
+</form><br>
+<form action="/showmore/:<%= data._id %>" method="POST">
+    <textarea rows="4" cols="50" form="userform" name="comments" placeholder="Enter comments here....."></textarea><br>
+    <button type="submit" class="btn btn-primary">comment</button>
+    <h4><%=data.name%> Rating</h4>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star"></span>
+        <span class="fa fa-star"></span>
+</body>
+</form>
+<% include ./partials/footer %>

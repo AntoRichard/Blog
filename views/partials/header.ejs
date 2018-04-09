@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" media="screen" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <style>
+     .fixed-nav-bar 
+        {
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 9999;
+            width: 100%;
+            height: 50px;
+            background-color: #00a087;
+        }
+        nav 
+         {
+              padding-top: 50px; 
+        }
+        #blogpage{
+            float: right;
+        }
+        #blogpae
+        {
+            text-align: left;
+        }
+        
+        #anch
+        {
+            float: right;
+            float: right;
+            margin-top: 20px;
+            margin-right: 0%;
+        }
+        nav.shrink{
+            background-color:transparent;
+            font-size: 20px;
+            padding: 30px 0px 0px 80px;
+            color: transparent; 
+
+        }
+        </style>
+        <!-- <script>
+            $(window).scroll(function(){
+                if($(document).scrollTop()>50){
+                    $('nav').addClass('shrink');
+                }else{
+                    $('nav').removeClass('shrink');
+                }
+            })
+        </script> -->
+        <div class=".fixed-nav-bar">
+                <nav class="navbar navbar-default navbar-fixed-top">
+                    <h2 id="blogpage" class="navbar-collapse collapse">BLOG PAGE</h2>
+                    <% if(!current){ %>
+                        <a id="anch"  href="/register">REGISTER  </a>
+                        <a id="anch"  href="/login">LOGIN  </a>
+                    <% }else{ %>
+                        <a id="anch"  href="/index">HOME </a>
+                        <a id="anch"  href="/addnew">ADD PRODUCT+   </a>
+                        <a id="anch"  href="/logout">LOGOUT  </a>
+                        <a id="anch" href="#">Logged in as <%= current.username %></a>
+                    <% } %>
+                    </nav>
+               </div>
+                   <br><br>
+               <br>
+               <br>
+               <br>
+               <br>
+        <div >

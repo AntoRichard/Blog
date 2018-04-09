@@ -1,0 +1,42 @@
+<%include ./partials/header%>
+<style>
+    body{
+        background-color: white;
+    }
+    h1{
+        color: black;
+    }
+    b{
+        color: black;
+    }
+    .f{
+        margin: 0 auto ;
+        width:250px;
+    }
+    #sty{
+        width: 30%;
+        margin: 0% auto;
+    } 
+</style>
+<div class="container">
+    <h1>
+       <center> CONTACT </center>
+    </h1>
+    <form>
+        <div class="form">
+            <input class="form-control" type="text" placeholder="name" name="contactname"><br>
+            <input class="form-control" type="number" placeholder="phone" name="contactphone"><br>
+            <input class="form-control" type="email" placeholder="email" name="contactemail"><br>
+            <input  class="form-control"type="text" placeholder="address" name="contactaddress"><br>
+            <button type="submit" class="btn btn-primary btn-block" >Submit</button>
+        </div>
+    </form><br><br>
+<form class="f">
+    <div class="container">
+       <ul> <img width="200" height="200" id="data" src="<%=data.image%>"></ul>
+       <ul> <h4 id="data">Product Name:<%=data.name%></h4></ul>
+       <ul><h4 id="data">Product Name:<%=data.price%></h4></ul>
+    </div>
+</form>
+</div>
+<%include ./partials/footer%>

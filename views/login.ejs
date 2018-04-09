@@ -1,0 +1,27 @@
+<% include ./partials/header %>
+<style>
+    body{
+        background-color: white;
+    }
+    h1{
+        color: black;
+    }
+    b{
+        color: black;
+    }
+    #sty{
+        width: 30%;
+        margin: 0% auto;
+    }
+</style>
+<h1><center>LOGIN</center> </h1>
+<div>
+    <form action="/login" method="POST">
+        <div class="form">
+                 <input class="form-control" id="sty" type="text" placeholder="username" name="username" required><br>
+                 <input class="form-control" id="sty" type="password" placeholder="password" name="password" required><br>
+                <button id="sty" class="btn btn-primary btn-block" type="submit">SUBMIT</button>
+        </div>
+    </form>
+</div>
+<% include ./partials/footer %>

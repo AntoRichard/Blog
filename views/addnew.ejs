@@ -1,0 +1,37 @@
+<% include ./partials/header %>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        
+
+        <style>
+                h1{
+                    color: black;
+                    font-style: oblique;
+                    font-family: 'Times New Roman';
+                }
+                body{
+                    background-color: white;
+                }
+                p{
+                    color: black;
+                    font-style: oblique;
+                }
+            </style>
+      
+    <h1>
+        <center>ADD NEW PRODUCT</center>
+    </h1>
+   <div class="container">
+       <div class="container"> 
+            <form  method="POST" action="/addnew">
+                    <p><b>Product name:</b></p><input class="form-control" type="text" accept="image/*" placeholder="Product name" name="animname" required>
+                    <p><b>Product price:</b></p><input class="form-control" type="text" accept="image/*" placeholder="Product price" name="animprice" required>
+                    <p><b>Product image:</b></p><input class="form-control" type="text" placeholder="Product url" name="animimg" required>
+                    <p><b>Product description:</b></p><input class="form-control" type="text" placeholder="Product description" name="animabut" required><br>
+                    <button type="submit" class="btn btn-success">Submit</button>
+            </form>
+       </div>
+   </div>
+   <% include ./partials/footer%>
